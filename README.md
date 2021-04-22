@@ -26,7 +26,7 @@ Environnement lors de la fabrication du script :
 
 1) Installer le paquet python3 sur votre système d'exploitation linux si celui-ci ne le possède pas déjà. Pour un Ubuntu Server 20.04, saisir la commande suivante dans un terminal:
 ```shell
-sudo apt-get update && apt-get upgrade && apt-get install python3 -y
+sudo apt-get update -y && apt-get upgrade -y && apt-get install python3 -y
 ```
 2) Installer le gestionnaire de paquet python pip. Pour Ubuntu Server 20.04, saisir la commande suivante dans un terminal:
 ```shell
