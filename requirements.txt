@@ -1,0 +1,2 @@
+# Paramiko
+paramiko==2.6.0
