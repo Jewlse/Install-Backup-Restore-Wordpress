@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Nettoyage de l'écran
+
+clear
+
 # Update/Upgrade système
 
 apt-get update && apt-get upgrade -y
