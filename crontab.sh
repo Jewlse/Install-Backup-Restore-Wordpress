@@ -7,16 +7,18 @@ clear
 # Création du dossier crontab /root/crontab
 
 mkdir crontab
-
+mv crontab /root
 # Création des dossiers scripts et logs dans /root/crontab
 
-mkdir /root/crontab/scripts
-mkdir /root/crontab/logs
+mkdir scripts
+mv scripts /root/crontab
+mkdir logs
+mv logs /root/crontab
 
 # Copier le fichier crontab dans /var/spool/cron/crontabs pour créer la tache de sauvegarde wordpress
 
-cp file/backupwordpressonly /root/crontab/scripts/backupwordpressonly
-cp file/root /var/spool/cron/crontabs/root
+cp -r files/backupwordressonly/ /root/crontab/scripts/
+cp files/root /var/spool/cron/crontabs/
 
 # Redémarrer crontab
 
@@ -24,7 +26,7 @@ systemctl restart cron
 
 # Nettoyage de l'écran
 
-Clear
+clear
 
 # Confirmation de la création de la tache
 
