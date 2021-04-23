@@ -11,6 +11,7 @@ apt-get install nagios-nrpe-server monitoring-plugins -y
 # Copie du fichier de configuration nrpe.cfg
 
 cp files/nrpe.cfg /etc/nagios/nrpe.cfg
+cp files/nrpe_local.cfg /etc/nagios/nrpe_local.cfg
 
 # Ouverture du port 5666 dans le firewall UFW
 
