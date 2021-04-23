@@ -212,7 +212,7 @@ def menu():
 
     # Affichage du menu
 
-    print("\nWordpress sur Ubuntu server 20.04 \n\n 1. Installation de Wordpress ( La machine redémarrera à la fin de l'installation ) \n 2. Sauvegarde de wordpress sur le SFTP \n 3. Restauration de wordpress depuis le SFTP \n 4. Installation du monitoring Nagios \n 5. Sortir du menu \n")
+    print("\nWordpress sur Ubuntu server 20.04 \n\n 1. Installation de Wordpress ( La machine redémarrera à la fin de l'installation ) \n 2. Sauvegarde de wordpress sur le SFTP \n 3. Restauration de wordpress depuis le SFTP \n 4. Installation du monitoring Nagios \n 5. Création d'une tache crontab pour la sauvegarde quotidienne du site wordpress \n 6. Sortir du menu \n")
     choice = input()
 
     if choice == "1":
@@ -232,10 +232,15 @@ def menu():
         print("Installation du monitoring Nagios\n")
         subprocess.call(['sh', './add-wordpress-to-monitor.sh'])
         menu()
-    if choice =="5":
+    if choice == "5":
+        print()
+        print("Création d'une tache crontab pour la sauvegarde quotidienne du site wordpress\n")
+        subprocess.call(['sh', './crontab.sh'])
+        menu()
+    if choice =="6":
         os.system("clear")
         exitmenu()
-    while choice not in ["1","2","3","4","5"]:
+    while choice not in ["1","2","3","4","5","6"]:
         os.system("clear")
         print("La saisie (" + choice + ") n'est pas un choix valide, veuillez recommencer.")
         menu()
